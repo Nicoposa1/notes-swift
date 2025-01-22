@@ -9,27 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        Text("Este es mi primer codigo en swift ui")
-//            .font(.system(size: 50))
-//            .lineLimit(2)
-//            .multilineTextAlignment(.center)
-//            .bold()
-//            .underline()
-//        Circle()
-//            .background(Color.green)
-//            .padding()
-//            .background(Color.red)
-//            .frame(width: 200, height: 200)
-//        Rectangle()
-//            .frame(width: 200, height: 200)
-//            .foregroundStyle(Color.yellow)
-//            .cornerRadius(50)
-//            .opacity(0.5)
-        Ellipse()
-            .stroke(lineWidth: 5)
-            .frame(width: 200, height: 400)
-            .foregroundStyle(Color.red)
-            .rotationEffect(.degrees(30))
+        VStack {
+            Button(action: {
+                // Acción del botón
+            }) {
+                Image("Logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 50) // Altura del botón
+                    .padding() // Relleno interno del contenido
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 20)
+            .padding(.vertical, -5)
+            .background(Color.blue) // Fondo azul Apple
+            .foregroundColor(.white) // Color del contenido
+            .clipShape(RoundedRectangle(cornerRadius: 10)) 
+            .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 3)
+        }
+        .padding()
     }
 }
 
